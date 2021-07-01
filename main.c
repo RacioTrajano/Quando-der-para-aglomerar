@@ -35,11 +35,8 @@ int uniqueValues[tam];
 
 unique (tam, values, uniqueValues);
 for (int i=0; i< tam; i++) {
-    if (uniqueValues[i] != 0) {
-      printf("%d", uniqueValues[i]);
-
-    }
-    
+  
+    printf("%d", uniqueValues[i]);
   
 }
 
