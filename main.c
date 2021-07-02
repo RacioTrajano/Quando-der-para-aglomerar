@@ -2,43 +2,35 @@
 
 int unique (int n, int values[n], int uniqueValues[n]){
 
-  for(int i=0; i< n; i++){
-    values[i] =0;
-  }
-  for(int i=0; i< n; i++){
-    uniqueValues[i] =0;
-  }
+int cont = 0;
+int pos;
+for (int i=0; i< n; i++){
+  scanf ("%d", &pos);
+  uniqueValues[pos] = 1;
+  cont++;
+}
 
-  for(int i=0; i< n; i++){
-    scanf("%d", &values[i]);
-  }
-  for(int i=0; i< n-1; i++){
-    for(int j = i+ 1; i< n; j++){
-      if (values[i] != values[j]){
-        uniqueValues[i] = values[i];
-      }
-    }
-  }
-  return uniqueValues[n];
-};
+n = cont;
 
+return n;
+}
 
 
 int main () {
 
+int leituras;
+scanf("%d", &leituras);
 
+int vetor_repetido[leituras];
+int vetor_unico[100];
 
-int tam;
-scanf("%d", &tam);
-int values[tam];
-int uniqueValues[tam];
+unique(leituras, vetor_repetido,vetor_unico);
 
-unique (tam, values, uniqueValues);
-for (int i=0; i< tam; i++) {
-  
-    printf("%d", uniqueValues[i]);
-  
+for (int i=0; i<100; i++){
+  if (vetor_unico[i] == 1){
+      printf("%d ", i);
+  }
 }
-
   return 0;
+
 }
